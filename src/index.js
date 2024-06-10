@@ -1,3 +1,3 @@
+import { on, off, emit } from "./scripts/pub-sub.js";
 import "./css/styles.css";
-
-console.log("hello world");
+import "./scripts/API.js";
