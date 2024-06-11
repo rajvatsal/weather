@@ -95,3 +95,20 @@ body {
 body.sunny {
   border-image: fill 1 linear-gradient(#ffff001a, #ffa500b8);
 }
+
+body.rain {
+  border-image: fill 1 linear-gradient(#4b4b4b1a, #060606e3);
+}
+
+body.cloudy {
+  border-image: fill 1 linear-gradient(#4b4b4b1a, #060606b8);
+  color: white;
+}
+
+body.clear {
+  border-image: fill 1 linear-gradient(#004a804a, #00adff87);
+}
+
+body.light-rain {
+  border-image: fill 1 linear-gradient(#4b4b4b1a, #8f8f8fb8);
+}

@@ -3,8 +3,6 @@ import { on, off, emit } from "./pub-sub.js";
 const display = document.querySelector(".display-info");
 const body = document.querySelector("body");
 
-body.setAttribute("class", "sunny");
-
 function displayInfo(info) {
 	const content = `
 <h1>${info.temp_c}°</h1>
@@ -40,6 +38,41 @@ function displayLoadingScreen() {
 	display.innerHTML = "LOADING...";
 }
 
+function changeBackground(info) {
+	const weather = info.condition.text;
+	let cls;
+
+	switch (weather.toLowerCase()) {
+		case "sunny":
+			cls = "sunny";
+			break;
+		case "partly cloudy":
+			cls = "cloudy";
+			break;
+		case "cloudy":
+			cls = "cloudy";
+			break;
+		case "rain":
+			cls = "rain";
+			break;
+		case "light rain":
+			cls = "light-rain";
+			break;
+		case "mist":
+			cls = "cloudy";
+			break;
+		case "clear":
+			cls = "clear";
+			break;
+		case "patchy rain nearby":
+			cls = "light-rain";
+			break;
+	}
+
+	body.setAttribute("class", cls);
+}
+
+on("WeatherFf", changeBackground);
 on("WeatherRq", displayLoadingScreen);
 on("WeatherFf", displayInfo);
 on("WeatherError", displayError);
