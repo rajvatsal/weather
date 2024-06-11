@@ -1,0 +1,60 @@
+@import url("./utility.css");
+
+@font-face {
+  font-family: "intertight";
+  src: url("./fonts/intertight-variable-font.woff2");
+}
+
+body {
+  height: 100vh;
+  min-height: 100vh;
+  font-family: "intertight", monospace;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+}
+
+.display-info {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  padding: 0px 30px 50px;
+  padding-left: 60px;
+}
+
+.weather-form {
+  background-color: black;
+  color: white;
+  max-width: 30%;
+}
+
+.display-info h1 {
+  font-size: 7rem;
+}
+.location h2 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.display-info div h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  align-self: flex-end;
+  gap: 50px;
+}
+
+.weather {
+  margin-top: auto;
+}
+
+.weather h5 {
+  text-align: center;
+}
