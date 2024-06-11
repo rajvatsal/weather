@@ -58,3 +58,36 @@ body {
 .weather h5 {
   text-align: center;
 }
+
+.search-component {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: flex-end;
+}
+
+.search-component input {
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  flex: 0 1 auto;
+  width: 100%;
+  margin-inline: 20px;
+  color: white;
+}
+
+.search-component button {
+  border: 0;
+  flex: 0 1 auto;
+  aspect-ratio: 1/1;
+  height: 100%;
+  background-color: rgb(43, 234, 234);
+}
+
+.search-component button svg {
+  height: 100%;
+  width: 100%;
+  flex: 0 0 auto;
+  max-width: 1.5rem;
+  margin-inline: auto;
+}
