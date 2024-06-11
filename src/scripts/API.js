@@ -90,10 +90,17 @@ const apiMethods = {
 
 async function getWeather(location) {
 	const response = await apiMethods.currentWeather(location);
+	try {
+		if (response.error) throw new Error(response.error.message);
+	} catch (err) {
+		console.error(err);
+		return emit("WeatherError", err);
+	}
 	const loc = response.location;
 	const { name, region, tz_id } = loc;
 	const temp_c = response.current.temp_c;
-	emit("WeatherFf", { temp_c, name, region, tz_id });
+	const condition = response.current.condition;
+	emit("WeatherFf", { temp_c, name, region, tz_id, condition });
 }
 
 on("WeatherRq", getWeather);
