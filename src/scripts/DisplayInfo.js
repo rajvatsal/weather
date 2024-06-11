@@ -1,6 +1,6 @@
 import { on, off, emit } from "./pub-sub.js";
 
-const display = document.querySelector(".info");
+const display = document.querySelector(".display-info");
 
 function displayInfo(info) {
 	const content = `
