@@ -92,8 +92,8 @@ async function getWeather(location) {
 	const response = await apiMethods.currentWeather(location);
 	const loc = response.location;
 	const { name, region, tz_id } = loc;
-	const temp = response.current.temp_c;
-	emit("WeatherFf", { temp, name, region, tz_id });
+	const temp_c = response.current.temp_c;
+	emit("WeatherFf", { temp_c, name, region, tz_id });
 }
 
 on("WeatherRq", getWeather);
