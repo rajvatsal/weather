@@ -1,6 +1,9 @@
 import { on, off, emit } from "./pub-sub.js";
 
 const display = document.querySelector(".display-info");
+const body = document.querySelector("body");
+
+body.setAttribute("class", "sunny");
 
 function displayInfo(info) {
 	const content = `

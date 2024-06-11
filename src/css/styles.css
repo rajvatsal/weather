@@ -26,7 +26,7 @@ body {
 }
 
 .weather-form {
-  background-color: black;
+  background-color: #000000d9;
   color: white;
   max-width: 30%;
 }
@@ -90,4 +90,8 @@ body {
   flex: 0 0 auto;
   max-width: 1.5rem;
   margin-inline: auto;
+}
+
+body.sunny {
+  border-image: fill 1 linear-gradient(#ffff001a, #ffa500b8);
 }
