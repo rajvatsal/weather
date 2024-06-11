@@ -28,7 +28,7 @@ body {
 .weather-form {
   background-color: #000000d9;
   color: white;
-  max-width: 30%;
+  width: 28%;
 }
 
 .display-info h1 {
