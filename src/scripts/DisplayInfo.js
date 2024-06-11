@@ -4,15 +4,15 @@ const display = document.querySelector(".display-info");
 
 function displayInfo(info) {
 	const content = `
-    <h1>${info.temp_c}°</h1>
+<h1>${info.temp_c}°</h1>
 <div class="container">
 <div class="location">
-    <h2>${info.name}</h2>
-    <h5>${info.region}</h5>
+<h2>${info.name}</h2>
+<h5>${info.region}</h5>
 </div>
 <div class="weather">
- <img src="${info.condition.icon}" />
-    <h5>${info.condition.text}</h5>
+<img src="${info.condition.icon}" />
+<h5>${info.condition.text}</h5>
 </div>
 </div>
 `;
@@ -33,6 +33,11 @@ function displayError(err) {
 	display.innerHTML = content;
 }
 
+function displayLoadingScreen() {
+	display.innerHTML = "LOADING...";
+}
+
+on("WeatherRq", displayLoadingScreen);
 on("WeatherFf", displayInfo);
 on("WeatherError", displayError);
 
