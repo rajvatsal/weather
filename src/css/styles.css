@@ -97,16 +97,18 @@ body.sunny {
 }
 
 body.rain {
-  border-image: fill 1 linear-gradient(#4b4b4b1a, #060606e3);
-}
-
-body.cloudy {
+  background-color: #181a1b !important;
   border-image: fill 1 linear-gradient(#4b4b4b1a, #060606b8);
   color: white;
 }
 
+body.cloudy {
+  border-image: fill 1 linear-gradient(#003ec9, #000543);
+  color: white;
+}
+
 body.clear {
-  border-image: fill 1 linear-gradient(#004a804a, #00adff87);
+  border-image: fill 1 linear-gradient(#00b5fdc2, #00adff87);
 }
 
 body.light-rain {
