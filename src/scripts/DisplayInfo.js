@@ -46,26 +46,26 @@ function changeBackground(info) {
 		case "sunny":
 			cls = "sunny";
 			break;
+		case "rain":
+			cls = "rain";
+			break;
+		case "mist":
+			cls = "cloudy";
+			break;
 		case "partly cloudy":
 			cls = "cloudy";
 			break;
 		case "cloudy":
 			cls = "cloudy";
 			break;
-		case "rain":
-			cls = "rain";
-			break;
 		case "light rain":
 			cls = "light-rain";
 			break;
-		case "mist":
-			cls = "cloudy";
+		case "patchy rain nearby":
+			cls = "light-rain";
 			break;
 		case "clear":
 			cls = "clear";
-			break;
-		case "patchy rain nearby":
-			cls = "light-rain";
 			break;
 	}
 
